@@ -1,6 +1,20 @@
 row1 = [' ', ' ', ' ']
 row2 = [' ', ' ', ' ']
 row3 = [' ', ' ', ' ']
+from IPython.display import clear_output
+
+
+def display_board(board):
+    clear_output()
+    print(board[7] + '|' + board[8] + '|' + board[9])
+    print('-|-|-')
+    print(board[4] + '|' + board[5] + '|' + board[6])
+    print('-|-|-')
+    print(board[1] + '|' + board[2] + '|' + board[3])
+
+
+test_board = [' '] * 10
+display_board(test_board)
 
 
 def display(row1, row2, row3):
@@ -79,15 +93,16 @@ def game_on_choice():
         else:
             return False
 
+
 game_on = True
-game_list = [0,1,2]
+game_list = [0, 1, 2]
 
 while game_on:
     display_game(game_list)
 
     position = position_choice()
 
-    game_list = replace_choice(game_list,position)
+    game_list = replace_choice(game_list, position)
 
     display(game_list)
 
