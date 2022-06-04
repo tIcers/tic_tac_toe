@@ -1,6 +1,4 @@
-row1 = [' ', ' ', ' ']
-row2 = [' ', ' ', ' ']
-row3 = [' ', ' ', ' ']
+
 from IPython.display import clear_output
 import random
 
